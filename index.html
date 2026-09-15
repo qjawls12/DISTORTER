@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DISTORTER — an input-preserving harsh-voice effect</title>
+<meta name="description" content="DISTORTER turns a clean sung or spoken take into a scream, growl, or shriek while keeping the input as the carrier, with a continuous intensity control and real-time streaming.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="#top">DISTORTER</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#samples">Audio examples</a>
+      <a href="#demo">Live demo</a>
+      <a href="credits.html">Credits</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="wrap">
+  <div class="hero">
+    <p class="kicker">ISMIR 2026 · Late-Breaking Demo</p>
+    <h1>DISTORTER</h1>
+    <p class="lede">
+      A real-time, input-preserving harsh-voice effect for speech and singing.
+      It turns a clean take into a scream, growl, or shriek without replacing your
+      voice — the melody, words, and timing stay yours, and one fader controls how
+      far the harshness goes.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#samples">Hear the examples</a>
+      <a class="btn" href="#demo">Try it live</a>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">
+      A causal mel-to-mel converter is trained separately for each technique on
+      unpaired recordings under the CycleGAN paradigm. Motivated by reports that
+      supraglottic vibration and turbulence can accompany vocal-fold phonation, it
+      does not estimate those anatomical sources: it adds an effective spectral
+      residual around the retained harmonic structure, then rescales every frame
+      back to the input's level. An inference-time bias on that residual is what
+      the intensity fader moves.
+    </p>
+
+    <figure>
+      <img src="figures/inference_panel.png" alt="Inference chain: a clean take is analysed into a log-mel spectrogram, a technique-specific causal converter adds the effective residual under the intensity offset, and one of three renderers produces audio.">
+      <figcaption>
+        End-to-end inference. A selected causal converter adds a controllable
+        effective residual; the same converted mel is rendered in low-latency,
+        look-ahead, or offline mode.
+      </figcaption>
+    </figure>
+
+    <div class="cards" style="margin-top:26px">
+      <div class="card">
+        <h3>Low latency</h3>
+        <p>A causal decoder streams while you perform, at 42.67&nbsp;ms of algorithmic latency.</p>
+      </div>
+      <div class="card">
+        <h3>Look-ahead</h3>
+        <p>BigVGAN-v2 in overlapping chunks with bounded future context, about half a second behind.</p>
+      </div>
+      <div class="card">
+        <h3>Offline</h3>
+        <p>The complete take rendered after the fact, replaying the intensity curve you moved live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="samples">
+  <div class="wrap">
+    <h2>Audio examples</h2>
+    <p class="sub">
+      The same input passed through all three technique-targeted modes, and one
+      input swept across the intensity range. The voices are held out: none of
+      them took part in training or in checkpoint selection.
+    </p>
+
+    <div class="note" style="margin-bottom:22px">
+      <strong>Not filled in yet.</strong> Drop the WAV or MP3 files into
+      <code>audio/</code> using the names below and they will play here. Only use
+      material you are free to publish — see <a href="credits.html">Credits and
+      licences</a> for what each corpus allows.
+    </div>
+
+    <h3 style="font-size:16px;margin:0 0 10px">One input, three modes</h3>
+    <div class="scroll">
+      <table class="samples">
+        <thead>
+          <tr><th>Input</th><th>Scream</th><th>Growl</th><th>Shriek</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><audio controls preload="none" src="audio/example1_input.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example1_scream.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example1_growl.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example1_shriek.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls preload="none" src="audio/example2_input.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example2_scream.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example2_growl.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example2_shriek.wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:16px;margin:28px 0 10px">The intensity control</h3>
+    <p class="sub" style="margin-bottom:14px">
+      The same take at increasing offsets. The fader changes how far the residual
+      dominates, not how loud the take is: every frame is rescaled to the input's
+      level.
+    </p>
+    <div class="scroll">
+      <table class="samples">
+        <thead>
+          <tr><th>&minus;3 nats</th><th>&minus;1</th><th>0</th><th>+0.75</th><th>+1.5</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><audio controls preload="none" src="audio/sweep_m3.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/sweep_m1.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/sweep_0.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/sweep_p075.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/sweep_p15.wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="demo">
+  <div class="wrap">
+    <h2>Live demo</h2>
+    <p class="sub">
+      An interactive browser demo streams your microphone to the converter and
+      plays the result back while you perform. It runs on a single research GPU
+      and admits a small number of sessions at a time, so access is by invitation.
+    </p>
+
+    <figure>
+      <img src="figures/demo_ui.png" alt="Screenshot of the browser demo: a live signal panel with the output waveform, its spectrogram and the recorded intensity contour, an intensity fader, and session controls.">
+      <figcaption>The demo interface: live signal and intensity automation on the left, session controls on the right.</figcaption>
+    </figure>
+
+    <p style="margin-top:22px">
+      <!-- LIVE DEMO LINK -- edit this one line whenever the tunnel is restarted. -->
+      <a class="btn primary" id="live-demo-link" href="mailto:kc07030@snu.ac.kr?subject=DISTORTER%20demo%20access">Request demo access</a>
+    </p>
+    <p class="sub" style="margin-top:14px">
+      Use headphones: speaker playback feeds back into the microphone and gets
+      converted again. Your audio is used only for the conversion and is not
+      stored on the server.
+    </p>
+  </div>
+</section>
+
+<section id="paper">
+  <div class="wrap">
+    <h2>Paper</h2>
+    <p class="sub">
+      <em>Distorter: A Real-Time Input-Preserving Harsh-Voice Effect for Speech and
+      Singing.</em> Beomjin Park, Seoul National University. Late-Breaking/Demo,
+      International Society for Music Information Retrieval Conference, 2026.
+    </p>
+    <pre class="cite">@inproceedings{park2026distorter,
+  author    = {Beomjin Park},
+  title     = {Distorter: A Real-Time Input-Preserving Harsh-Voice Effect
+               for Speech and Singing},
+  booktitle = {Extended Abstracts for the Late-Breaking/Demo Session of the
+               Int. Society for Music Information Retrieval Conf. (ISMIR)},
+  year      = {2026}
+}</pre>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    DISTORTER · Beomjin Park, Seoul National University ·
+    <a href="credits.html">Credits and licences</a>
+  </div>
+</footer>
+
+</body>
+</html>
