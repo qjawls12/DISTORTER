@@ -84,15 +84,14 @@
     <h2>Audio examples</h2>
     <p class="sub">
       The same input passed through all three technique-targeted modes, and one
-      input swept across the intensity range. The voices are held out: none of
-      them took part in training or in checkpoint selection.
+      input swept across the intensity range. A first pass of examples; better
+      material will replace it.
     </p>
 
     <div class="note" style="margin-bottom:22px">
-      <strong>Not filled in yet.</strong> Drop the WAV or MP3 files into
-      <code>audio/</code> using the names below and they will play here. Only use
-      material you are free to publish — see <a href="credits.html">Credits and
-      licences</a> for what each corpus allows.
+      Every example is rendered offline with BigVGAN-v2 from a held-out speaker
+      who took part in neither training nor checkpoint selection. The inputs are
+      CC BY 4.0 recordings; see <a href="credits.html">Credits and licences</a>.
     </div>
 
     <h3 style="font-size:16px;margin:0 0 10px">One input, three modes</h3>
@@ -103,13 +102,15 @@
         </thead>
         <tbody>
           <tr>
-            <td><audio controls preload="none" src="audio/example1_input.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example1_input.wav"></audio>
+                <div style="color:var(--muted);font-size:12px;margin-top:4px">sung phrase, VocalSet (CC&nbsp;BY&nbsp;4.0)</div></td>
             <td><audio controls preload="none" src="audio/example1_scream.wav"></audio></td>
             <td><audio controls preload="none" src="audio/example1_growl.wav"></audio></td>
             <td><audio controls preload="none" src="audio/example1_shriek.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls preload="none" src="audio/example2_input.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/example2_input.wav"></audio>
+                <div style="color:var(--muted);font-size:12px;margin-top:4px">read speech, VCTK (CC&nbsp;BY&nbsp;4.0)</div></td>
             <td><audio controls preload="none" src="audio/example2_scream.wav"></audio></td>
             <td><audio controls preload="none" src="audio/example2_growl.wav"></audio></td>
             <td><audio controls preload="none" src="audio/example2_shriek.wav"></audio></td>
@@ -149,7 +150,8 @@
     <p class="sub">
       An interactive browser demo streams your microphone to the converter and
       plays the result back while you perform. It runs on a single research GPU
-      and admits a small number of sessions at a time, so access is by invitation.
+      and admits two sessions at a time, so if it is busy please try again
+      shortly. A session lasts up to five minutes.
     </p>
 
     <figure>
@@ -159,7 +161,7 @@
 
     <p style="margin-top:22px">
       <!-- LIVE DEMO LINK -- edit this one line whenever the tunnel is restarted. -->
-      <a class="btn primary" id="live-demo-link" href="mailto:kc07030@snu.ac.kr?subject=DISTORTER%20demo%20access">Request demo access</a>
+      <a class="btn primary" id="live-demo-link" href="https://nevertheless-glucose-tower-bodies.trycloudflare.com/invite/jJBMnVaDq2-R5AxInPosv56R4n8bB99BmtMPmAd0BCo">Open the live demo</a>
     </p>
     <p class="sub" style="margin-top:14px">
       Use headphones: speaker playback feeds back into the microphone and gets
