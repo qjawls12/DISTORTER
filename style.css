@@ -164,16 +164,6 @@ table.samples td .src { min-height: 2.8em; }
 }
 .note strong { color: var(--ink); }
 
-pre.cite {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 16px 18px;
-  overflow-x: auto;
-  font: 13px/1.6 var(--mono);
-  margin: 0;
-  color: var(--ink-soft);
-}
 
 dl.credits { margin: 0; }
 dl.credits dt { font-weight: 600; margin-top: 20px; color: var(--ink); }
