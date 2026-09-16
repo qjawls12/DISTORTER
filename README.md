@@ -18,8 +18,8 @@ Drop the files into `audio/` under the names `index.html` already references:
 
 | Slot | Files |
 |---|---|
-| One input, three modes | `<source>_input.wav` and `<source>_{scream,growl,shriek}.wav`, currently `metal-singer22`, `spoken-male3` and `italian-female1` |
-| Intensity sweep | `sweep-scream-singer22_{input,m3,m1,0,p075,p15}.wav` |
+| One input, three modes | `<source>_input.wav` and `<source>_{scream,growl,shriek}.wav`, currently `metal-singer12`, `spoken-male3` and `italian-female1` |
+| Intensity sweep | `sweep-scream-singer11_{input,m3,m1,0,p075,p15}.wav` |
 
 A name carries the source identity on purpose. Re-rendering the same slot from a
 different singer or technique then lands on a new name, so a visitor's browser
