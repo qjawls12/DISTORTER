@@ -153,16 +153,6 @@ table.samples audio { width: 100%; min-width: 190px; display: block; }
 table.samples td .src { min-height: 2.8em; }
 .scroll { overflow-x: auto; }
 
-.note {
-  background: var(--surface-blue);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--blue);
-  border-radius: var(--radius-sm);
-  padding: 14px 16px;
-  color: var(--ink-soft);
-  font-size: 14px;
-}
-.note strong { color: var(--ink); }
 
 
 dl.credits { margin: 0; }
