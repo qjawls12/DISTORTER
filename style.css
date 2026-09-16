@@ -178,3 +178,5 @@ footer.site { padding-block: 30px 48px; color: var(--muted); font-size: 14px; }
 footer.site a { color: var(--muted); }
 a { color: var(--blue); }
 a:hover { color: var(--blue-dark); }
+
+.src { color: var(--muted); font-size: 12px; margin-top: 6px; line-height: 1.4; }

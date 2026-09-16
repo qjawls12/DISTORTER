@@ -84,15 +84,15 @@
   <div class="wrap">
     <h2>Audio examples</h2>
     <p class="sub">
-      The same input passed through all three technique-targeted modes, and one
-      input swept across the intensity range. A first pass of examples; better
-      material will replace it.
+      Three inputs of different character, each through all three
+      technique-targeted modes, and one of them swept across the intensity range.
+      Rendered offline with BigVGAN-v2.
     </p>
 
     <div class="note" style="margin-bottom:22px">
-      Every example is rendered offline with BigVGAN-v2 from a held-out speaker
-      who took part in neither training nor checkpoint selection. The inputs are
-      CC BY 4.0 recordings; see <a href="credits.html">Credits and licences</a>.
+      The effect keeps your voice as the carrier, so how much of the original
+      tone stays audible depends on the input. A clear, strongly sustained take
+      survives the conversion more than a spoken or already-rough one does.
     </div>
 
     <h3 style="font-size:16px;margin:0 0 10px">One input, three modes</h3>
@@ -103,28 +103,40 @@
         </thead>
         <tbody>
           <tr>
-            <td><audio controls preload="none" src="audio/example1_input.wav"></audio>
-                <div style="color:var(--muted);font-size:12px;margin-top:4px">sung phrase, VocalSet (CC&nbsp;BY&nbsp;4.0)</div></td>
-            <td><audio controls preload="none" src="audio/example1_scream.wav"></audio></td>
-            <td><audio controls preload="none" src="audio/example1_growl.wav"></audio></td>
-            <td><audio controls preload="none" src="audio/example1_shriek.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/metal_input.wav"></audio>
+                <div class="src">clear voice by a metal singer<br>EMVD, CC&nbsp;BY&nbsp;4.0</div></td>
+            <td><audio controls preload="none" src="audio/metal_scream.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/metal_growl.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/metal_shriek.wav"></audio></td>
           </tr>
           <tr>
-            <td><audio controls preload="none" src="audio/example2_input.wav"></audio>
-                <div style="color:var(--muted);font-size:12px;margin-top:4px">read speech, VCTK (CC&nbsp;BY&nbsp;4.0)</div></td>
-            <td><audio controls preload="none" src="audio/example2_scream.wav"></audio></td>
-            <td><audio controls preload="none" src="audio/example2_growl.wav"></audio></td>
-            <td><audio controls preload="none" src="audio/example2_shriek.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/spoken_input.wav"></audio>
+                <div class="src">spoken<br>VocalSet, CC&nbsp;BY&nbsp;4.0</div></td>
+            <td><audio controls preload="none" src="audio/spoken_scream.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/spoken_growl.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/spoken_shriek.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls preload="none" src="audio/italian_input.wav"></audio>
+                <div class="src">sung in Italian<br>VocalSet, CC&nbsp;BY&nbsp;4.0</div></td>
+            <td><audio controls preload="none" src="audio/italian_scream.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/italian_growl.wav"></audio></td>
+            <td><audio controls preload="none" src="audio/italian_shriek.wav"></audio></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <p class="sub" style="margin-top:12px;font-size:13px">
+      The VocalSet speakers took part in neither training nor checkpoint
+      selection. The EMVD singer was not trained on either, but is one of the
+      three whose recordings drove checkpoint selection.
+    </p>
 
     <h3 style="font-size:16px;margin:28px 0 10px">The intensity control</h3>
     <p class="sub" style="margin-bottom:14px">
-      The same take at increasing offsets. The fader changes how far the residual
-      dominates, not how loud the take is: every frame is rescaled to the input's
-      level.
+      The metal singer's take through the growl mode at five offsets. The fader
+      changes how far the residual dominates, not how loud the take is: every
+      frame is rescaled to the input's level.
     </p>
     <div class="scroll">
       <table class="samples">

@@ -1,27 +1,39 @@
 {
-  "examples": {
-    "example1": {
+  "input_peak_dbfs": -3.0,
+  "inputs": {
+    "italian": {
       "corpus": "VocalSet",
+      "holdout": "used in neither training nor checkpoint selection",
       "intensity_nats": 0.0,
-      "item_id": "vocalset__female1_excerpts_straight_f1_caro_straight",
+      "label": "sung in Italian",
+      "licence": "CC BY 4.0",
       "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/Vocalset/raw/v1.1_FULL/FULL/female1/excerpts/straight/f1_caro_straight.wav",
       "speaker": "female1"
     },
-    "example2": {
-      "corpus": "VCTK",
+    "metal": {
+      "corpus": "EMVD",
+      "holdout": "not used in training; one of the three singers that drove checkpoint selection",
       "intensity_nats": 0.0,
-      "item_id": "vctk__p225_p225_002_mic2",
-      "source": "/workspace/hdd_data/datasets/metalvoice_sources/VCTK-Corpus-0.92/extracted/wav48_silence_trimmed/p225/p225_002_mic2.flac",
-      "speaker": "p225"
+      "label": "clear voice by a metal singer",
+      "licence": "CC BY 4.0",
+      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer12_ClearVoice_Mid_lyrics.wav",
+      "speaker": "Singer12"
+    },
+    "spoken": {
+      "corpus": "VocalSet",
+      "holdout": "used in neither training nor checkpoint selection",
+      "intensity_nats": 0.0,
+      "label": "spoken",
+      "licence": "CC BY 4.0",
+      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/Vocalset/raw/v1.1_FULL/FULL/male3/excerpts/spoken/m3_row_spoken.wav",
+      "speaker": "male3"
     }
   },
-  "input_peak_dbfs": -3.0,
   "renderer": "offline BigVGAN-v2",
   "sample_rate": 24000,
   "seconds": 5.0,
   "sweep": {
-    "corpus": "VocalSet",
-    "item_id": "vocalset__female1_excerpts_straight_f1_dona_straight",
+    "input": "metal",
     "offsets_nats": [
       -3.0,
       -1.0,
@@ -29,8 +41,6 @@
       0.75,
       1.5
     ],
-    "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/Vocalset/raw/v1.1_FULL/FULL/female1/excerpts/straight/f1_dona_straight.wav",
-    "speaker": "female1",
-    "technique": "scream"
+    "technique": "growl"
   }
 }
