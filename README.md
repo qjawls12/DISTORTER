@@ -18,8 +18,12 @@ Drop the files into `audio/` under the names `index.html` already references:
 
 | Slot | Files |
 |---|---|
-| One input, three modes | `example1_input.wav`, `example1_scream.wav`, `example1_growl.wav`, `example1_shriek.wav`, and the same with `example2_` |
-| Intensity sweep | `sweep_m3.wav`, `sweep_m1.wav`, `sweep_0.wav`, `sweep_p075.wav`, `sweep_p15.wav` |
+| One input, three modes | `<source>_input.wav` and `<source>_{scream,growl,shriek}.wav`, currently `metal-singer12`, `spoken-male3` and `italian-female1` |
+| Intensity sweep | `sweep-scream-singer11_{input,m3,m1,0,p075,p15}.wav` |
+
+A name carries the source identity on purpose. Re-rendering the same slot from a
+different singer or technique then lands on a new name, so a visitor's browser
+cannot serve the previous audio from its cache under a name it already has.
 
 Only publish material you are free to redistribute. EMO, EMVD, VCTK and VocalSet
 are all CC BY 4.0, so conversions of those inputs can go up with credit.

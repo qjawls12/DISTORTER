@@ -3,6 +3,7 @@
   "inputs": {
     "italian": {
       "corpus": "VocalSet",
+      "files": "italian-female1_(input|scream|growl|shriek).wav",
       "holdout": "used in neither training nor checkpoint selection",
       "intensity_nats": 0.0,
       "label": "sung in Italian",
@@ -12,6 +13,7 @@
     },
     "metal": {
       "corpus": "EMVD",
+      "files": "metal-singer12_(input|scream|growl|shriek).wav",
       "holdout": "not used in training; one of the three singers that drove checkpoint selection",
       "intensity_nats": 0.0,
       "label": "clear voice by a metal singer",
@@ -21,6 +23,7 @@
     },
     "spoken": {
       "corpus": "VocalSet",
+      "files": "spoken-male3_(input|scream|growl|shriek).wav",
       "holdout": "used in neither training nor checkpoint selection",
       "intensity_nats": 0.0,
       "label": "spoken",
@@ -29,11 +32,13 @@
       "speaker": "male3"
     }
   },
+  "naming": "File names carry the source identity, so a re-render from a different singer or technique lands on a new name and cannot be served from a cache of the old one.",
   "renderer": "offline BigVGAN-v2",
   "sample_rate": 24000,
   "seconds": 5.0,
   "sweep": {
     "corpus": "EMVD",
+    "files": "sweep-scream-singer11_(input|m3|m1|0|p075|p15).wav",
     "holdout": "not used in training; one of the three singers that drove checkpoint selection",
     "material": "lyrics",
     "offsets_nats": [
