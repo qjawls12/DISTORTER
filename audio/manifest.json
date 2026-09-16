@@ -13,13 +13,15 @@
     },
     "metal": {
       "corpus": "EMVD",
-      "files": "metal-singer12_(input|scream|growl|shriek).wav",
-      "holdout": "not used in training; one of the three singers that drove checkpoint selection",
+      "files": "metal-singer22_(input|scream|growl|shriek).wav",
+      "holdout": "an EMVD test singer: used in neither training nor checkpoint selection",
       "intensity_nats": 0.0,
       "label": "clear voice by a metal singer",
       "licence": "CC BY 4.0",
-      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer12_ClearVoice_Mid_lyrics.wav",
-      "speaker": "Singer12"
+      "material": "lyrics",
+      "register": "Mid",
+      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer22_ClearVoice_Mid_lyrics.wav",
+      "speaker": "Singer22"
     },
     "spoken": {
       "corpus": "VocalSet",
@@ -38,8 +40,8 @@
   "seconds": 5.0,
   "sweep": {
     "corpus": "EMVD",
-    "files": "sweep-scream-singer11_(input|m3|m1|0|p075|p15).wav",
-    "holdout": "not used in training; one of the three singers that drove checkpoint selection",
+    "files": "sweep-scream-singer22_(input|m3|m1|0|p075|p15).wav",
+    "holdout": "an EMVD test singer: used in neither training nor checkpoint selection",
     "material": "lyrics",
     "offsets_nats": [
       -3.0,
@@ -49,8 +51,8 @@
       1.5
     ],
     "register": "High",
-    "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer11_ClearVoice_High_lyrics.wav",
-    "speaker": "Singer11",
+    "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer22_ClearVoice_High_lyrics.wav",
+    "speaker": "Singer22",
     "technique": "scream"
   }
 }
