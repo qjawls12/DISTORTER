@@ -153,14 +153,19 @@ table.samples audio { width: 100%; min-width: 190px; display: block; }
 table.samples td .src { min-height: 2.8em; }
 .scroll { overflow-x: auto; }
 
-/* The sweep wraps instead of scrolling: seven players fit one row when wide and
-   fold to 4 + 3, then 2-3, as the page narrows, so no column hides off-screen. */
-.sweep { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
-.sweep-cell { padding: 12px 12px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+/* The sweep: the input stands tall on the left, the six offsets fill two rows of
+   three beside it, negative offsets above zero and positive.  On a phone the input
+   goes on top and the offsets fold to two across. */
+.sweep { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: auto; gap: 12px; }
+.sweep-cell { padding: 12px 12px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); min-width: 0; }
+.sweep-cell.input { grid-row: 1 / span 2; display: flex; flex-direction: column; justify-content: center; background: var(--surface-soft); }
 .sweep-cell .offset { display: block; margin-bottom: 8px; font: 700 11px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .sweep-cell audio { width: 100%; display: block; }
 .sweep-cell .src { min-height: 1.4em; }
-@media (max-width: 560px) { .sweep { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+@media (max-width: 700px) {
+  .sweep { grid-template-columns: 1fr 1fr; }
+  .sweep-cell.input { grid-row: auto; grid-column: 1 / -1; }
+}}
 
 
 
