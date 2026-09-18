@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f6f7f4">
-<title>DISTORTER — an input-preserving harsh-voice effect</title>
+<title>DISTORTER — a controllable, real-time harsh-voice effect</title>
 <meta name="description" content="DISTORTER turns a clean sung or spoken take into a scream, growl, or shriek while keeping the input as the carrier, with a continuous intensity control and real-time streaming.">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -28,7 +28,7 @@
   <div class="hero">
     <h1>DISTORTER</h1>
     <p class="lede">
-      A real-time, input-preserving harsh-voice effect for speech and singing.
+      A controllable, real-time harsh-voice effect for speech and singing.
       It turns a clean take into a scream, growl, or shriek without replacing your
       voice — the melody, words, and timing stay yours, and one fader controls how
       far the harshness goes.
@@ -46,11 +46,11 @@
     <p class="sub">
       A causal mel-to-mel converter is trained separately for each technique on
       unpaired recordings under the CycleGAN paradigm. Motivated by reports that
-      supraglottic vibration and turbulence can accompany vocal-fold phonation, it
-      does not estimate those anatomical sources: it adds an effective spectral
-      residual around the retained harmonic structure, then rescales every frame
-      back to the input's level. An inference-time bias on that residual is what
-      the intensity fader moves.
+      supraglottic sound sources can accompany vocal-fold phonation and produce
+      technique-dependent spectral changes, it does not estimate those anatomical
+      sources: it adds an effective spectral residual around the retained harmonic
+      structure, then rescales every frame back to the input's level. An
+      inference-time bias on that residual is what the intensity fader moves.
     </p>
 
     <figure>
@@ -65,7 +65,7 @@
     <div class="cards" style="margin-top:26px">
       <div class="card">
         <h3>Low latency</h3>
-        <p>A causal decoder streams while you perform, at 42.67&nbsp;ms of algorithmic latency.</p>
+        <p>A causal decoder streams while you perform, with a delay short enough to monitor yourself as you sing.</p>
       </div>
       <div class="card">
         <h3>Look-ahead</h3>
