@@ -14,7 +14,7 @@
     "spoken-male3_shriek": 9.21,
     "sweep-scream-singer11_0": 14.58,
     "sweep-scream-singer11_input": 14.58,
-    "sweep-scream-singer11_m1": 14.58,
+    "sweep-scream-singer11_m15": 14.58,
     "sweep-scream-singer11_m3": 14.58,
     "sweep-scream-singer11_p075": 14.58,
     "sweep-scream-singer11_p15": 14.58
@@ -68,11 +68,11 @@
   "status": "Interim selection. The EMVD takes are the ones auditioned while choosing checkpoints; test-split material will replace them.",
   "sweep": {
     "corpus": "EMVD",
-    "files": "sweep-scream-singer11_(input|m3|m1|0|p075|p15).wav",
+    "files": "sweep-scream-singer11_(input|m3|m15|0|p075|p15).wav",
     "material": "lyrics",
     "offsets_nats": [
       -3.0,
-      -1.0,
+      -1.5,
       0.0,
       0.75,
       1.5
