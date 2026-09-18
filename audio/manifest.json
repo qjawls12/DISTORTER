@@ -1,4 +1,24 @@
 {
+  "durations_seconds": {
+    "italian-female1_growl": 30.87,
+    "italian-female1_input": 30.87,
+    "italian-female1_scream": 30.87,
+    "italian-female1_shriek": 30.87,
+    "metal-singer12_growl": 14.85,
+    "metal-singer12_input": 14.85,
+    "metal-singer12_scream": 14.85,
+    "metal-singer12_shriek": 14.85,
+    "spoken-male3_growl": 9.21,
+    "spoken-male3_input": 9.21,
+    "spoken-male3_scream": 9.21,
+    "spoken-male3_shriek": 9.21,
+    "sweep-scream-singer11_0": 14.58,
+    "sweep-scream-singer11_input": 14.58,
+    "sweep-scream-singer11_m1": 14.58,
+    "sweep-scream-singer11_m3": 14.58,
+    "sweep-scream-singer11_p075": 14.58,
+    "sweep-scream-singer11_p15": 14.58
+  },
   "input_peak_dbfs": -3.0,
   "inputs": {
     "italian": {
@@ -36,6 +56,13 @@
   },
   "naming": "File names carry the source identity, so a re-render from a different singer or technique lands on a new name and cannot be served from a cache of the old one.",
   "renderer": "offline BigVGAN-v2",
+  "rendering": {
+    "intensity_nats_default": 0.0,
+    "length": "full source take; leading and trailing near-silence trimmed, no duration cap",
+    "peak_dbfs": -3.0,
+    "renderer": "offline (BigVGAN-v2)",
+    "sample_rate": 24000
+  },
   "sample_rate": 24000,
   "seconds": 5.0,
   "status": "Interim selection. The EMVD takes are the ones auditioned while choosing checkpoints; test-split material will replace them.",
