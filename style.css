@@ -158,7 +158,11 @@ table.samples td .src { min-height: 2.8em; }
    goes on top and the offsets fold to two across. */
 .sweep { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: auto; gap: 12px; }
 .sweep-cell { padding: 12px 12px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); min-width: 0; }
-.sweep-cell.input { grid-row: 1 / span 2; display: flex; flex-direction: column; justify-content: center; background: var(--surface-soft); }
+/* Same surface as its neighbours; the label sits at the top like theirs, and the
+   player centres in the room the two-row span leaves below it. */
+.sweep-cell.input { grid-row: 1 / span 2; display: flex; flex-direction: column; }
+.sweep-cell.input audio { margin-top: auto; }
+.sweep-cell.input .src { margin-bottom: auto; }
 .sweep-cell .offset { display: block; margin-bottom: 8px; font: 700 11px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .sweep-cell audio { width: 100%; display: block; }
 .sweep-cell .src { min-height: 1.4em; }
