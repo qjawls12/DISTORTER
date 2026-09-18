@@ -131,33 +131,47 @@
 
     <h3 style="font-size:16px;margin:28px 0 10px">The intensity control</h3>
     <p class="sub" style="margin-bottom:14px">
-      A metal singer's high-register take through the scream mode at five offsets,
+      A metal singer's high-register take through the scream mode at six offsets,
       with the input for reference. The fader changes how far the residual
       dominates, not how loud the take is: every frame is rescaled to the input's
       level.
     </p>
-    <div class="scroll">
-      <table class="samples">
-        <thead>
-          <tr><th>Input</th><th>&minus;3 nats</th><th>&minus;1.5</th><th>0</th><th>+0.75</th><th>+1.5</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_input.wav"></audio>
-                <div class="src">EMVD, CC&nbsp;BY&nbsp;4.0</div></td>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_m3.wav"></audio>
-                <div class="src"></div></td>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_m15.wav"></audio>
-                <div class="src"></div></td>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_0.wav"></audio>
-                <div class="src"></div></td>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_p075.wav"></audio>
-                <div class="src"></div></td>
-            <td><audio controls preload="none" src="audio/sweep-scream-singer11_p15.wav"></audio>
-                <div class="src"></div></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="sweep" aria-label="Intensity sweep">
+      <div class="sweep-cell">
+        <span class="offset">Input</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_input.wav"></audio>
+        <div class="src">EMVD, CC&nbsp;BY&nbsp;4.0</div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">&minus;3 nats</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_m3.wav"></audio>
+        <div class="src"></div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">&minus;2</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_m2.wav"></audio>
+        <div class="src"></div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">&minus;1</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_m1.wav"></audio>
+        <div class="src"></div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">0</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_0.wav"></audio>
+        <div class="src"></div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">+1</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_p1.wav"></audio>
+        <div class="src"></div>
+      </div>
+      <div class="sweep-cell">
+        <span class="offset">+1.5</span>
+        <audio controls preload="none" src="audio/sweep-scream-singer11_p15.wav"></audio>
+        <div class="src"></div>
+      </div>
     </div>
   </div>
 </section>

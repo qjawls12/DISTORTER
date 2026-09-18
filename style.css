@@ -153,6 +153,15 @@ table.samples audio { width: 100%; min-width: 190px; display: block; }
 table.samples td .src { min-height: 2.8em; }
 .scroll { overflow-x: auto; }
 
+/* The sweep wraps instead of scrolling: seven players fit one row when wide and
+   fold to 4 + 3, then 2-3, as the page narrows, so no column hides off-screen. */
+.sweep { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.sweep-cell { padding: 12px 12px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.sweep-cell .offset { display: block; margin-bottom: 8px; font: 700 11px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.sweep-cell audio { width: 100%; display: block; }
+.sweep-cell .src { min-height: 1.4em; }
+@media (max-width: 560px) { .sweep { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } }
+
 
 
 dl.credits { margin: 0; }
