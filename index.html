@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f6f7f4">
 <title>DISTORTER — a controllable, real-time harsh-voice effect</title>
-<meta name="description" content="DISTORTER turns a clean sung or spoken take into a scream, growl, or shriek while keeping the input as the carrier, with a continuous intensity control and real-time streaming.">
+<meta name="description" content="DISTORTER applies a scream-, growl-, or shriek-targeted effect while retaining the input performance as an explicit carrier. One fader controls the residual contribution.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,9 +29,9 @@
     <h1>DISTORTER</h1>
     <p class="lede">
       A controllable, real-time harsh-voice effect for speech and singing.
-      It turns a clean take into a scream, growl, or shriek without replacing your
-      voice — the melody, words, and timing stay yours, and one fader controls how
-      far the harshness goes.
+      It applies a scream-, growl-, or shriek-targeted effect while retaining the
+      input performance as an explicit carrier. One fader controls the residual
+      contribution.
     </p>
     <div class="actions">
       <a class="btn primary" href="#samples">Hear the examples</a>
@@ -65,11 +65,11 @@
     <div class="cards" style="margin-top:26px">
       <div class="card">
         <h3>Low latency</h3>
-        <p>A causal decoder streams while you perform, with a delay short enough to monitor yourself as you sing.</p>
+        <p>A causal decoder supports live streaming at 42.67 ms configured algorithmic latency.</p>
       </div>
       <div class="card">
         <h3>Look-ahead</h3>
-        <p>BigVGAN-v2 in overlapping chunks with bounded future context, about half a second behind.</p>
+        <p>BigVGAN-v2 runs in overlapping chunks at 442.67 ms configured algorithmic latency.</p>
       </div>
       <div class="card">
         <h3>Offline</h3>
@@ -180,8 +180,9 @@
   <div class="wrap">
     <h2>Live demo</h2>
     <p class="sub">
-      An interactive browser demo streams your microphone, or an audio file you
-      choose, to the converter and plays the result back while you perform. It runs on a single research GPU
+      An interactive browser demo streams either microphone input or a user-selected
+      audio file to the converter and plays back the converted output while intensity
+      is adjusted. It runs on a single research GPU
       and admits two sessions at a time, so if it is busy please try again
       shortly. A session lasts up to five minutes.
     </p>
