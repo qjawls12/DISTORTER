@@ -18,8 +18,8 @@ Drop the files into `audio/` under the names `index.html` already references:
 
 | Slot | Files |
 |---|---|
-| One input, three modes | `<source>_input.wav` and `<source>_{scream,growl,shriek}.wav`, currently `metal-singer12`, `spoken-male3` and `italian-female1` |
-| Intensity sweep | `sweep-scream-singer11_{input,m3,m1,0,p075,p15}.wav` |
+| One input, three modes | `<source>_input.wav` and `<source>_{scream,growl,shriek}.wav`, currently `emvd-singer22-mid-lyrics`, `spoken-male3` and `italian-female1` |
+| Intensity sweep | `sweep-scream-singer20-high-lyrics_{input,m3,m2,m1,0,p1,p15}.wav` |
 
 A name carries the source identity on purpose. Re-rendering the same slot from a
 different singer or technique then lands on a new name, so a visitor's browser
@@ -29,6 +29,10 @@ Only publish material you are free to redistribute. EMO, EMVD, VCTK and VocalSet
 are all CC BY 4.0, so conversions of those inputs can go up with credit.
 **GTSinger is CC BY-NC-SA 4.0**: keep it off this site, since the page and the
 paper are both CC BY 4.0 and cannot carry a NonCommercial-ShareAlike derivative.
+
+The published EMVD examples use Singer20 and Singer22 from the held-out test
+split. They were used in neither training nor checkpoint selection. Their use
+here is qualitative demo curation rather than an untouched test-set evaluation.
 
 Keep each clip short. GitHub recommends staying under 1 GB per repository and
 refuses single files over 100 MB.

@@ -1,24 +1,24 @@
 {
   "durations_seconds": {
+    "emvd-singer22-mid-lyrics_growl": 14.063,
+    "emvd-singer22-mid-lyrics_input": 14.063,
+    "emvd-singer22-mid-lyrics_scream": 14.063,
+    "emvd-singer22-mid-lyrics_shriek": 14.063,
     "italian-female1_growl": 30.87,
     "italian-female1_input": 30.87,
     "italian-female1_scream": 30.87,
     "italian-female1_shriek": 30.87,
-    "metal-singer12_growl": 14.85,
-    "metal-singer12_input": 14.85,
-    "metal-singer12_scream": 14.85,
-    "metal-singer12_shriek": 14.85,
     "spoken-male3_growl": 9.21,
     "spoken-male3_input": 9.21,
     "spoken-male3_scream": 9.21,
     "spoken-male3_shriek": 9.21,
-    "sweep-scream-singer11_0": 14.58,
-    "sweep-scream-singer11_input": 14.58,
-    "sweep-scream-singer11_m1": 14.58,
-    "sweep-scream-singer11_m2": 14.58,
-    "sweep-scream-singer11_m3": 14.58,
-    "sweep-scream-singer11_p1": 14.58,
-    "sweep-scream-singer11_p15": 14.58
+    "sweep-scream-singer20-high-lyrics_0": 14.788,
+    "sweep-scream-singer20-high-lyrics_input": 14.788,
+    "sweep-scream-singer20-high-lyrics_m1": 14.788,
+    "sweep-scream-singer20-high-lyrics_m2": 14.788,
+    "sweep-scream-singer20-high-lyrics_m3": 14.788,
+    "sweep-scream-singer20-high-lyrics_p1": 14.788,
+    "sweep-scream-singer20-high-lyrics_p15": 14.788
   },
   "input_peak_dbfs": -3.0,
   "inputs": {
@@ -34,15 +34,15 @@
     },
     "metal": {
       "corpus": "EMVD",
-      "files": "metal-singer12_(input|scream|growl|shriek).wav",
+      "files": "emvd-singer22-mid-lyrics_(input|scream|growl|shriek).wav",
       "intensity_nats": 0.0,
-      "label": "clear voice by a metal singer",
+      "label": "clear voice, mid-register lyrics",
       "licence": "CC BY 4.0",
       "material": "lyrics",
       "register": "Mid",
-      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer12_ClearVoice_Mid_lyrics.wav",
-      "speaker": "Singer12",
-      "split": "EMVD validation (checkpoint selection); not in training"
+      "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer22_ClearVoice_Mid_lyrics.wav",
+      "speaker": "Singer22",
+      "split": "EMVD test; used in neither training nor checkpoint selection"
     },
     "spoken": {
       "corpus": "VocalSet",
@@ -65,11 +65,10 @@
     "sample_rate": 24000
   },
   "sample_rate": 24000,
-  "seconds": 5.0,
-  "status": "Interim selection. The EMVD takes are the ones auditioned while choosing checkpoints; test-split material will replace them.",
+  "status": "The public EMVD examples were qualitatively curated from the held-out test split after training and checkpoint selection were frozen.",
   "sweep": {
     "corpus": "EMVD",
-    "files": "sweep-scream-singer11_(input|m3|m2|m1|0|p1|p15).wav",
+    "files": "sweep-scream-singer20-high-lyrics_(input|m3|m2|m1|0|p1|p15).wav",
     "material": "lyrics",
     "offsets_nats": [
       -3.0,
@@ -80,9 +79,9 @@
       1.5
     ],
     "register": "High",
-    "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer11_ClearVoice_High_lyrics.wav",
-    "speaker": "Singer11",
-    "split": "EMVD validation (checkpoint selection); not in training",
+    "source": "/workspace/hdd_data/datasets/marg_intern_2025_summer_private_data/ExtremeMetalVocalsDataset/EMVD/audio/Singer20_ClearVoice_High_lyrics.wav",
+    "speaker": "Singer20",
+    "split": "EMVD test; used in neither training nor checkpoint selection",
     "technique": "scream"
   }
 }
