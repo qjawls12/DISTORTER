@@ -63,5 +63,6 @@ index.html     project page: summary, figure, audio slots, live-demo link
 credits.html   dataset and component attribution, linked from every footer
 style.css      one stylesheet, light and dark
 figures/       inference panel and demo screenshot, copied from the paper
-audio/         empty; see above
+audio/         published audio examples and their provenance manifest
+artifacts/     final camera-ready paper, poster, thumbnail, and demo video
 ```

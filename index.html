@@ -36,6 +36,9 @@
     <div class="actions">
       <a class="btn primary" href="#samples">Hear the examples</a>
       <a class="btn" href="#demo">Try it live</a>
+      <a class="btn" href="artifacts/654_lbd.pdf">Paper</a>
+      <a class="btn" href="artifacts/654_poster.pdf">Poster</a>
+      <a class="btn" href="artifacts/654_video.mp4">Demo video</a>
     </div>
   </div>
 </div>
@@ -44,13 +47,14 @@
   <div class="wrap">
     <h2>How it works</h2>
     <p class="sub">
-      A causal mel-to-mel converter is trained separately for each technique on
-      unpaired recordings under the CycleGAN paradigm. Motivated by reports that
-      supraglottic sound sources can accompany vocal-fold phonation and produce
-      technique-dependent spectral changes, it does not estimate those anatomical
-      sources: it adds an effective spectral residual around the retained harmonic
-      structure, then rescales every frame back to the input's level. An
-      inference-time bias on that residual is what the intensity fader moves.
+      A causal mel-to-mel converter is trained separately for each technique using
+      unpaired clean and harsh recordings under the CycleGAN paradigm. As a modeling
+      prior, Distorter approximates the net source effects accompanying harsh phonation
+      under shared vocal-tract shaping with an effective residual anchored to the
+      input's coarse spectral envelope, without estimating anatomical sources. The
+      input remains an explicit carrier; an inference-time residual-level offset
+      controls residual dominance, while frame-wise correction keeps the converted
+      mel close to the input level.
     </p>
 
     <figure>
@@ -73,8 +77,29 @@
       </div>
       <div class="card">
         <h3>Offline</h3>
-        <p>The complete take rendered after the fact, replaying the intensity curve you moved live.</p>
+        <p>The complete take is rendered after the fact, replaying the intensity curve you moved live.</p>
       </div>
+    </div>
+    <p class="sub" style="margin-top:14px">
+      The streaming figures are configured algorithmic latencies; browser, network,
+      scheduling and load, and audio-device buffering are excluded.
+    </p>
+  </div>
+</section>
+
+<section id="publication">
+  <div class="wrap">
+    <h2>Publication</h2>
+    <p class="sub">
+      Beomjin Park and Kyogu Lee, “Distorter: A Controllable, Real-Time Harsh-Voice
+      Effect for Speech and Singing,” Extended Abstracts for the Late-Breaking Demo
+      Session of the 27th International Society for Music Information Retrieval
+      Conference, Abu Dhabi, UAE, 2026.
+    </p>
+    <div class="actions" style="margin-top:18px">
+      <a class="btn primary" href="artifacts/654_lbd.pdf">Read the paper</a>
+      <a class="btn" href="artifacts/654_poster.pdf">View the poster</a>
+      <a class="btn" href="artifacts/654_video.mp4">Watch the demo video</a>
     </div>
   </div>
 </section>
@@ -208,7 +233,7 @@
 
 <footer class="site">
   <div class="wrap">
-    DISTORTER · Beomjin Park, Seoul National University ·
+    DISTORTER · Beomjin Park and Kyogu Lee, Seoul National University ·
     <a href="credits.html">Credits and licences</a>
   </div>
 </footer>

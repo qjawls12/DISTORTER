@@ -42,8 +42,10 @@
         Ting-Chao Hsu, Music and AI Lab, National Taiwan University. Zenodo,
         2026. <a href="https://doi.org/10.5281/zenodo.18356449">doi:10.5281/zenodo.18356449</a>.
         Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-        This paired vocal-fry scream corpus was used to train the scream converter;
-        no EMO audio is redistributed here.
+        Its clean and vocal-fry scream recordings were used as unpaired domain data
+        for the scream converter. EMO validation recordings were used during
+        checkpoint selection, and 20 real screams were used for the exploratory
+        Whisper diagnostic reported in the paper. No EMO audio is redistributed here.
       </dd>
 
       <dt>EMVD: Extreme Metal Vocals Dataset</dt>
@@ -52,12 +54,18 @@
         Mathieu Lagrange. Zenodo, 2023.
         <a href="https://doi.org/10.5281/zenodo.8406322">doi:10.5281/zenodo.8406322</a>.
         Licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
-        Its clean, <span style="font-variant:small-caps">HardcoreScream</span>,
-        <span style="font-variant:small-caps">DeathGrowl</span> and
-        <span style="font-variant:small-caps">BlackShriek</span> recordings were
-        used to train the three converters. The audio examples use clear-voice
-        takes from Singer&nbsp;20 and Singer&nbsp;22 in the held-out EMVD test split;
-        those inputs and their converted derivatives are redistributed under
+        The scream converter used <span style="font-variant:small-caps">ClearVoice</span>
+        and <span style="font-variant:small-caps">HardcoreScream</span>; the growl
+        converter used <span style="font-variant:small-caps">ClearVoice</span> and
+        <span style="font-variant:small-caps">DeathGrowl</span>; and the shriek
+        converter used <span style="font-variant:small-caps">ClearVoice</span> and
+        <span style="font-variant:small-caps">BlackShriek</span>. All were trained
+        as unpaired domains. Singer&nbsp;11, 12 and 23 were used for checkpoint
+        validation. Real EMVD recordings were also used for the mode-feature,
+        ECAPA-TDNN and SwiftF0 diagnostics reported in the paper. The audio examples
+        use clear-voice takes from Singer&nbsp;20 and Singer&nbsp;22 in the held-out
+        EMVD test split; those singers were used in neither training nor checkpoint
+        selection. Their inputs and converted derivatives are redistributed under
         CC BY 4.0 with corpus attribution.
       </dd>
     </dl>
@@ -145,7 +153,7 @@
 
 <footer class="site">
   <div class="wrap">
-    DISTORTER · Beomjin Park, Seoul National University ·
+    DISTORTER · Beomjin Park and Kyogu Lee, Seoul National University ·
     <a href="index.html">Back to the project page</a>
   </div>
 </footer>
